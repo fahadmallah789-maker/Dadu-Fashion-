@@ -1,42 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dadu Fashion</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dadu Fashion - Premium Clothing Store. Shop the latest trends in Men, Women, Kids fashion and accessories.">
+    <title>Dadu Fashion - Premium Clothing Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-<header>
-  <h1>Dadu Fashion</h1>
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">Shop</a>
-    <a href="#">Contact</a>
-  </nav>
-</header>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon"><i class="fas fa-crown"></i></span>
+                    <span class="logo-text">DADU <span class="logo-highlight">FASHION</span></span>
+                </a>
+            </div>
+            <div class="nav-center">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="signup.html">Sign Up</a></li>
+                </ul>
+            </div>
+            <div class="nav-right">
+                <div class="search-toggle" id="searchToggle">
+                    <i class="fas fa-search"></i>
+                </div>
+                <a href="products.html" class="cart-icon" id="cartIcon">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-badge" id="cartBadge">0</span>
+                </a>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <!-- Search Bar -->
+        <div class="search-bar" id="searchBar">
+            <div class="search-container">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchInput" placeholder="Search for products, categories, brands...">
+                <button class="search-close" id="searchClose"><i class="fas fa-times"></i></button>
+            </div>
+        </div>
+    </nav>
 
-<section class="hero">
-  <h2>New Collection 2026</h2>
-  <p>Trendy clothes for everyone</p>
-  <button onclick="shopNow()">Shop Now</button>
-</section>
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="hero-badge">New Collection 2025</span>
+            <h1 class="hero-title">Dadu Fashion</h1>
+            <p class="hero-subtitle">Premium Clothing Store</p>
+            <p class="hero-desc">Discover the latest trends in luxury fashion. Curated styles for those who dare to stand out.</p>
+            <div class="hero-buttons">
+                <a href="products.html" class="btn btn-primary">Shop Now <i class="fas fa-arrow-right"></i></a>
+                <a href="#featured" class="btn btn-outline">Explore Collection</a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span>Scroll Down</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
 
-<section class="products">
-  <div class="card">
-    <h3>T-Shirt</h3>
-    <p>Rs 999</p>
-  </div>
-  <div class="card">
-    <h3>Jeans</h3>
-    <p>Rs 1999</p>
-  </div>
-  <div class="card">
-    <h3>Jacket</h3>
-    <p>Rs 2999</p>
-  </div>
-</section>
+    <!-- Categories Section -->
+    <section class="categories section-padding" id="categories">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Categories</span>
+                <h2 class="section-title">Shop by Collection</h2>
+                <p class="section-desc">Explore our curated collections designed for every lifestyle</p>
+            </div>
+            <div class="categories-grid">
+                <a href="products.html?category=men" class="category-card">
+                    <div class="category-img">
+                        <img src="https://images.unsplash.com/photo-1603252109303-2751441dd157?w=600&q=80" alt="Men's Collection">
+                        <div class="category-overlay">
+                            <h3>Men</h3>
+                            <span>Explore <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </a>
+                <a href="products.html?category=women" class="category-card">
+                    <div class="category-img">
+                        <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?w=600&q=80" alt="Women's Collection">
+                        <div class="category-overlay">
+                            <h3>Women</h3>
+                            <span>Explore <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </a>
+                <a href="products.html?category=kids" class="category-card">
+                    <div class="category-img">
+                        <img src="https://images.unsplash.com/photo-1622290291468-a28f7a7dc6a8?w=600&q=80" alt="Kids Collection">
+                        <div class="category-overlay">
+                            <h3>Kids</h3>
+                            <span>Explore <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </a>
+                <a href="products.html?category=accessories" class="category-card">
+                    <div class="category-img">
+                        <img src="https://images.unsplash.com/photo-1606760227091-3dd870d97f1d?w=600&q=80" alt="Accessories">
+                        <div class="category-overlay">
+                            <h3>Accessories</h3>
+                            <span>Explore <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
 
-<script src="script.js"></script>
+    <!-- Featured Products Section -->
+    <section class="featured section-padding" id="featured">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Featured</span>
+                <h2 class="section-title">Trending Now</h2>
+                <p class="section-desc">Handpicked styles that define this season's must-have looks</p>
+            </div>
+            <div class="products-grid" id="featuredProductsGrid">
+                <!-- Dynamic JS injection -->
+            </div>
+            <div class="section-footer">
+                <a href="products.html" class="btn btn-primary-outline">View All Products <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features / Trust Badges -->
+    <section class="features section-padding">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h4>Free Shipping</h4>
+                    <p>On orders over $50</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-undo-alt"></i>
+                    </div>
+                    <h4>Easy Returns</h4>
+                    <p>30-day return policy</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4>Secure Payment</h4>
+                    <p>100% secure checkout</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h4>24/7 Support</h4>
+                    <p>Dedicated customer service</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter section-padding">
+        <div class="container">
+            <div class="newsletter-content">
+                <span class="section-tag">Stay Updated</span>
+                <h2>Join the Dadu Family</h2>
+                <p>Subscribe and get 10% off your first order + exclusive access to new arrivals</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-brand">
+                    <a href="index.html" class="logo">
+                        <span class="logo-icon"><i class="fas fa-crown"></i></span>
+                        <span class="logo-text">DADU <span class="logo-highlight">FASHION</span></span>
+                    </a>
+                    <p>Premium clothing store bringing you the finest fashion from around the world. Style that speaks volumes.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="products.html?category=new">New Arrivals</a></li>
+                        <li><a href="products.html?category=sale">Sale</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="products.html?category=men">Men</a></li>
+                        <li><a href="products.html?category=women">Women</a></li>
+                        <li><a href="products.html?category=kids">Kids</a></li>
+                        <li><a href="products.html?category=accessories">Accessories</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Fashion Street, NY 10001</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> hello@dadufashion.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Dadu Fashion. All rights reserved. Made with <i class="fas fa-heart"></i> for fashion lovers.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <div class="toast-content">
+            <i class="fas fa-check-circle"></i>
+            <span id="toastMessage">Item added to cart!</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
-</html>
+                  </html>
