@@ -1,0 +1,44 @@
+body{
+font-family: Arial;
+margin:0;
+padding:0;
+background:#f5f5f5;
+}
+
+header{
+background:black;
+color:white;
+padding:15px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+nav a{
+color:white;
+margin:0 10px;
+text-decoration:none;
+}
+
+.hero{
+padding:50px;
+text-align:center;
+background:#ff4d4d;
+color:white;
+}
+
+.products{
+display:flex;
+justify-content:center;
+gap:20px;
+padding:20px;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:10px;
+width:120px;
+text-align:center;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
