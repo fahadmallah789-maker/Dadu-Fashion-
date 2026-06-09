@@ -1,0 +1,43 @@
+/* frontend/src/styles/theme.css */
+:root {
+  --primary-black: #000000;
+  --primary-white: #ffffff;
+  --primary-gold: #D4AF37;
+  --primary-gold-light: #F3E5AB;
+  --primary-gold-dark: #B8960C;
+  --gray-dark: #1a1a1a;
+  --gray-light: #f5f5f5;
+  --text-dark: #333333;
+  --text-light: #666666;
+}
+
+body {
+  color: var(--text-dark);
+}
+
+.btn-primary {
+  @apply bg-black text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:bg-gray-800 hover:shadow-lg;
+}
+
+.btn-gold {
+  @apply bg-gradient-to-r from-[#D4AF37] to-[#F3E5AB] text-black px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:shadow-lg;
+}
+
+.card {
+  @apply bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl;
+}
+
+.section-title {
+  @apply text-3xl md:text-4xl font-bold text-center mb-12 relative;
+}
+
+.section-title:after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-gold), var(--primary-gold-dark));
+}
